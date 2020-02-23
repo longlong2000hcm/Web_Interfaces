@@ -4,6 +4,7 @@ const fs = require('fs')
 var multer = require('multer')
 var upload = multer()
 const bcrypt = require('bcryptjs');
+const saltRounds = 4;
 
 const getJSON = (filePath) => {
     file = fs.readFileSync(filePath);
@@ -13,7 +14,16 @@ const getJSON = (filePath) => {
 
 const usersArray = getJSON("./data/users.json");
 
-router.post('/register', upload.none(), (req, res) => {
+function validateContentTypeHeaders(req, res, next) {
+    if (req.is('multipart/form-data') === 'multipart/form-data') {
+        next();
+    }
+    else {
+        res.status(400).send('Bad Request - Missing Headers');
+    }
+}
+
+router.post('/', validateContentTypeHeaders, upload.none(), (req, res) => {
     let username = req.body.username.trim();
     let password = req.body.password.trim();
 
@@ -22,7 +32,7 @@ router.post('/register', upload.none(), (req, res) => {
         (typeof password === "string") &&
         (password.length > 4)) {
         bcrypt.hash(password, saltRounds).then(hash => {
-            usersArray.push({username: username, password: hash});
+            usersArray.push({ username: username, password: hash });
             fs.writeFileSync("./data/users.json", JSON.stringify({ data: usersArray }, null, 2));
             res.sendStatus(201);
         })
@@ -31,3 +41,5 @@ router.post('/register', upload.none(), (req, res) => {
         res.status(400).send("incorrect username or password, both must be strings and username more than 4 long and password more than 6 characters long");
     }
 })
+
+module.exports = router;

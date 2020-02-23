@@ -7,6 +7,7 @@ const port = 4000;
 
 const productComponent = require('./components/product.js');
 const searchComponent = require('./components/search.js');
+const registerComponent =  require('./components/register');
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -15,6 +16,8 @@ app.get('/hello', (req, res) => res.send('Hello GET World!'));
 
 app.use('/products', productComponent);
 app.use('/search', searchComponent);
+app.use('/register', registerComponent);
+
 
 
 app.listen(port, () => {
