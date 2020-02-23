@@ -32,7 +32,7 @@ router.post('/', validateContentTypeHeaders, upload.none(), (req, res) => {
         (typeof password === "string") &&
         (password.length > 4)) {
         bcrypt.hash(password, saltRounds).then(hash => {
-            usersArray.push({ username: username, password: hash });
+            usersArray.push({ idUser: usersArray.length+1, username: username, password: hash });
             fs.writeFileSync("./data/users.json", JSON.stringify({ data: usersArray }, null, 2));
             res.sendStatus(201);
         })

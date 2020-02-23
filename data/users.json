@@ -1,8 +1,14 @@
 {
   "data": [
     {
+      "idUser": 1,
       "username": "user1",
-      "password": "$2a$04$MPWHpXVW7Sw7EWS.HsM8E.6JIc7ilGkPwpVl4gBeZsDvphbQ/XXzW"
+      "password": "$2a$04$KVdCPwXTF/kS8WE4zrZaHuHXTJiZDe28txKeNh2OCRfvAa8otrsWu"
+    },
+    {
+      "idUser": 2,
+      "username": "username1",
+      "password": "$2a$04$LN0k9GgP0Lwu9OWWOQNQOOrwOgpznn6CCU9TLNk17bifif5EJiaBW"
     }
   ]
 }
