@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
+const has = require('has-value');
 var multer = require('multer')
 var upload = multer()
 const bcrypt = require('bcryptjs');
@@ -28,7 +29,7 @@ router.post('/', validateContentTypeHeaders, upload.none(), (req, res) => {
         res.status(400).send("Missing username or password");
         return null;
     }
-    
+
     let username = req.body.username.trim();
     let password = req.body.password.trim();
 
