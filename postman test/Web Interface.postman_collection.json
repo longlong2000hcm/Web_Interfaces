@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "787a151f-1fe8-4f62-9fa8-ea6c78bf5a5a",
+		"_postman_id": "83e024d6-865c-4e01-927e-7d611af171c5",
 		"name": "Web Interface",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -289,6 +289,20 @@
 		},
 		{
 			"name": "search",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d5ee4ae0-ecff-412b-b985-66879fd0025d",
+						"exec": [
+							"pm.test(\"Check if search return something\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
