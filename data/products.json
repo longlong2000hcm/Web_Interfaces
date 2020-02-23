@@ -1,1 +1,21 @@
-{"data":[]}
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "title",
+      "description": "description",
+      "category": "category",
+      "location": "location",
+      "images": [
+        "download (1).jpg",
+        "download (2).jpg",
+        "download (3).jpg",
+        "download (4).jpg"
+      ],
+      "price": "price",
+      "dateOfPosting": "dateOfPosting",
+      "deliveryType": "deliveryType",
+      "sellerInfo": "sellerInfo"
+    }
+  ]
+}
