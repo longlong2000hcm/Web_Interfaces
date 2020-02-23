@@ -4,6 +4,28 @@ const router = express.Router();
 const fs = require('fs')
 var multer = require('multer')
 var upload = multer({ dest: './images' });
+const exjwt = require('express-jwt');
+
+
+const checkBearerToken = (req, res, next) => {
+    if(req.headers.authorization) {
+        next();
+    }
+    else {
+        res.sendStatus(401);
+    }
+}
+
+const checkAuthentication = (req, res, next) => {
+    console.log("Invoke authentication")
+    if (!req.user) {
+        res.sendStatus(401);
+        return;
+    }
+    else {
+        next();
+    }
+}
 
 const getJSON = (filePath) => {
     file = fs.readFileSync(filePath);
@@ -59,6 +81,8 @@ router.get('/', (req, res) => {
 var cpUpload = upload.fields([{ name: 'images', maxCount: 4 }])
 router.post('/',
     validateContentTypeHeaders,
+    checkBearerToken,
+    exjwt({ secret: 'madebyken' }), checkAuthentication,
     cpUpload,
     validateNewProduct
     ,
@@ -87,45 +111,54 @@ router.post('/',
         res.json(newProduct);
     });
 
-router.put('/:id', validateContentTypeHeaders, cpUpload, (req, res) => {
-    let badRequest = false;
-    if (Object.prototype.hasOwnProperty.call(req.files, 'images')) {
-        var imageArray = req.files['images'].map(image => {
-            fs.renameSync(image.path, './images/' + image.originalname);
-            console.log('renamed complete');
-            return image.originalname;
-        });
-    }
-    for (let prop in req.body) {
-        if (!Object.prototype.hasOwnProperty.call(productsArray[req.params.id-1], prop)) {
-            badRequest = true;
-            res.sendStatus(400);
+router.put('/:id',
+    validateContentTypeHeaders,
+    checkBearerToken,
+    exjwt({ secret: 'madebyken' }), checkAuthentication,
+    cpUpload,
+    (req, res) => {
+        let badRequest = false;
+        if (Object.prototype.hasOwnProperty.call(req.files, 'images')) {
+            var imageArray = req.files['images'].map(image => {
+                fs.renameSync(image.path, './images/' + image.originalname);
+                console.log('renamed complete');
+                return image.originalname;
+            });
         }
-    }
-    if (badRequest === false) {
         for (let prop in req.body) {
-            if (prop !== 'images') {
-                productsArray[req.params.id-1].prop = req.body.prop;
+            if (!Object.prototype.hasOwnProperty.call(productsArray[req.params.id - 1], prop)) {
+                badRequest = true;
+                res.sendStatus(400);
             }
         }
-        if (req.files.images) {
-            productsArray[req.params.id-1].images = imageArray;
+        if (badRequest === false) {
+            for (let prop in req.body) {
+                if (prop !== 'images') {
+                    productsArray[req.params.id - 1][prop] = req.body[prop];
+                }
+            }
+            if (req.files.images) {
+                productsArray[req.params.id - 1].images = imageArray;
+            }
+            fs.writeFileSync("./data/products.json", JSON.stringify({ data: productsArray }, null, 2));
+            res.status(200).send("Product modified");
         }
-        fs.writeFileSync("./data/products.json", JSON.stringify({ data: productsArray }, null, 2));
-        res.sendStatus(200);
-    }
 
-})
+    })
 
-router.delete('/:id', (req,res) => {
-    if (req.params.id<=productsArray.length) {
-        productsArray.splice(req.params.id-1,1);
-        fs.writeFileSync("./data/products.json", JSON.stringify({ data: productsArray }, null, 2));
-        res.sendStatus(200);
-    } 
-    else {
-        res.sendStatus(400);
-    }
-})
+router.delete('/:id',
+    checkBearerToken,
+    exjwt({ secret: 'madebyken' }),
+    checkAuthentication,
+    (req, res) => {
+        if (req.params.id <= productsArray.length) {
+            productsArray.splice(req.params.id - 1, 1);
+            fs.writeFileSync("./data/products.json", JSON.stringify({ data: productsArray }, null, 2));
+            res.sendStatus(200);
+        }
+        else {
+            res.sendStatus(400);
+        }
+    })
 
 module.exports = router;
