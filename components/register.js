@@ -24,6 +24,11 @@ function validateContentTypeHeaders(req, res, next) {
 }
 
 router.post('/', validateContentTypeHeaders, upload.none(), (req, res) => {
+    if (!has(req.body,"username")||!has(req.body,"password")) {
+        res.status(400).send("Missing username or password");
+        return null;
+    }
+    
     let username = req.body.username.trim();
     let password = req.body.password.trim();
 
