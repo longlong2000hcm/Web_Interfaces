@@ -1,21 +1,3 @@
 {
-  "data": [
-    {
-      "id": 1,
-      "title": "product1",
-      "description": "description1",
-      "category": "category1",
-      "location": "location1",
-      "images": [
-        "download (1).jpg",
-        "download (2).jpg",
-        "download (3).jpg",
-        "download (4).jpg"
-      ],
-      "price": "price1",
-      "dateOfPosting": "dateOfPosting1",
-      "deliveryType": "deliveryType1",
-      "sellerInfo": "sellerInfo1"
-    }
-  ]
+  "data": []
 }

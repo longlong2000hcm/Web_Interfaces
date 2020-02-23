@@ -3,12 +3,37 @@
     {
       "idUser": 1,
       "username": "user1",
-      "password": "$2a$04$KVdCPwXTF/kS8WE4zrZaHuHXTJiZDe28txKeNh2OCRfvAa8otrsWu"
+      "password": "$2a$04$U5n5ya8PGe8Hwt1JbOFuXOvDGUluptjMWqKBJVyCF78UJeNz5f3i."
     },
     {
       "idUser": 2,
-      "username": "username1",
-      "password": "$2a$04$LN0k9GgP0Lwu9OWWOQNQOOrwOgpznn6CCU9TLNk17bifif5EJiaBW"
+      "username": "user1",
+      "password": "$2a$04$NFhoLiSbtWa/hJ51lr2qieg585T0yytxuG8MzAa83B7ThVcwbwFlK"
+    },
+    {
+      "idUser": 3,
+      "username": "user1",
+      "password": "$2a$04$BWcptHoJQYrW/xgOPX9WO.UXlqs/hWExjytXbVGXKe7DLiwdvKGCe"
+    },
+    {
+      "idUser": 4,
+      "username": "user1",
+      "password": "$2a$04$ub.IYZy9YyH3n2jpWZCDIefHE3gEdjXz0HySSFJn5QG1ktpcW7l5O"
+    },
+    {
+      "idUser": 5,
+      "username": "user1",
+      "password": "$2a$04$O9Yvyqr7xCNmbSKRrJjWt.pcFsApLy0QbCaCewwuwto2zsUV7juiy"
+    },
+    {
+      "idUser": 6,
+      "username": "user1",
+      "password": "$2a$04$RZGHZ1K9ZT09e3ca8EUod.7I1jfnSLX32.ioA/pwmYqZ2ZxH1fJte"
+    },
+    {
+      "idUser": 7,
+      "username": "user1",
+      "password": "$2a$04$uY0/YgPZFketB9PUo8OyuOTl.T4gLb.XNp9xMpx53kcLdYjbCg3E."
     }
   ]
 }

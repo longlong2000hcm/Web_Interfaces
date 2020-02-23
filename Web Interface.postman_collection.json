@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "787a151f-1fe8-4f62-9fa8-ea6c78bf5a5a",
+		"name": "Web Interface",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ce1a4719-df92-465b-a1b3-c1a944158566",
+						"exec": [
+							"pm.test(\"Check if user is created\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7dee03c1-8e72-4c55-a80e-e88fca1a4c33",
+						"exec": [
+							"pm.test(\"Check if user is logged in\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Check if JWT token is returned\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property('token');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a new product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7bbe28be-cb40-4b1c-86c8-7ce542f1111e",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjQ3ODQzMCwiZXhwIjoxNTgyNjA4MDMwfQ.9WYHzTEJQ6m3BatSgPcswQz5W2ub9gbLAywwGv3bs1c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "bike",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "for cycling",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "machine",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Oulu",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/download (1).jpg"
+						},
+						{
+							"key": "price",
+							"value": "100$",
+							"type": "text"
+						},
+						{
+							"key": "dateOfPosting",
+							"value": "23/2/2020",
+							"type": "text"
+						},
+						{
+							"key": "deliveryType",
+							"value": "shipping",
+							"type": "text"
+						},
+						{
+							"key": "sellerInfo",
+							"value": "sellerInfo1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify a product with id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fee4afc4-a776-4a7c-91fc-0382c6d12682",
+						"exec": [
+							"pm.test(\"Check if product is modified\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjQ3ODQzMCwiZXhwIjoxNTgyNjA4MDMwfQ.9WYHzTEJQ6m3BatSgPcswQz5W2ub9gbLAywwGv3bs1c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "very red bike",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/bike.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/search/category/machine",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"search",
+						"category",
+						"machine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a product with id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "60d25c7c-147f-41c9-9f72-bb30e52b4c0b",
+						"exec": [
+							"pm.test(\"Check if delete is complete\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjQ3ODQzMCwiZXhwIjoxNTgyNjA4MDMwfQ.9WYHzTEJQ6m3BatSgPcswQz5W2ub9gbLAywwGv3bs1c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

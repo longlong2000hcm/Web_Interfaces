@@ -63,6 +63,14 @@ function validateNewProduct(req, res, next) {
         errorArray.push('image');
         err.message += "Missing or empty image";
     }
+    if (has(req.body,"deliveryType")) {
+        if (req.body.deliveryType.toLowerCase()==="shipping"
+        ||req.body.deliveryType.toLowerCase()==="pickup") {
+        } else {
+            errorArray.push('wrongDeliveryType');
+            err.message += "Delivery type can only be shipping or pickup";
+        }
+    }
     if (errorArray.length > 0) {
         res.status(400).send(err.message);
     }
@@ -74,7 +82,6 @@ function validateNewProduct(req, res, next) {
 var productsArray = getJSON("./data/products.json");
 
 router.get('/', (req, res) => {
-    //fs.writeFileSync("./data/products.json", JSON.stringify({data: productsArray}));
     res.json(productsArray);
 });
 
