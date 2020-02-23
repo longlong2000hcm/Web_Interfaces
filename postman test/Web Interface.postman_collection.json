@@ -178,7 +178,7 @@
 						{
 							"key": "images",
 							"type": "file",
-							"src": "/C:/Users/Admin/Downloads/download (1).jpg"
+							"src": "./download (1).jpg"
 						},
 						{
 							"key": "price",
@@ -268,7 +268,7 @@
 						{
 							"key": "images",
 							"type": "file",
-							"src": "/C:/Users/Admin/Downloads/bike.jpeg"
+							"src": "./bike.jpeg"
 						}
 					]
 				},
