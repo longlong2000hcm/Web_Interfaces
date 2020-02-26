@@ -25,6 +25,7 @@ function validateContentTypeHeaders(req, res, next) {
 }
 
 router.post('/', validateContentTypeHeaders, upload.none(), (req, res) => {
+    console.log("Login route invoked");
     if (!has(req.body,"username")||!has(req.body,"password")) {
         res.status(400).send("Missing username or password");
         return null;

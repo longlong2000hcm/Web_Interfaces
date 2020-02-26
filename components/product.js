@@ -82,6 +82,7 @@ function validateNewProduct(req, res, next) {
 var productsArray = getJSON("./data/products.json");
 
 router.get('/', (req, res) => {
+    console.log("Get all product route invoked")
     res.status(200).json(productsArray);
 });
 
@@ -94,6 +95,7 @@ router.post('/',
     validateNewProduct
     ,
     (req, res) => {
+        console.log("Create product route invoked")
         let imageArray = req.files['images'].map(image => {
             fs.renameSync(image.path, './images/' + image.originalname);
             console.log('renamed complete');
@@ -124,6 +126,7 @@ router.put('/:id',
     exjwt({ secret: 'madebyken' }), checkAuthentication,
     cpUpload,
     (req, res) => {
+        console.log("Modify product rouute invoked")
         let badRequest = false;
         if (Object.prototype.hasOwnProperty.call(req.files, 'images')) {
             var imageArray = req.files['images'].map(image => {
@@ -158,6 +161,7 @@ router.delete('/:id',
     exjwt({ secret: 'madebyken' }),
     checkAuthentication,
     (req, res) => {
+        console.log("Delete product route invoked")
         if (req.params.id <= productsArray.length) {
             productsArray.splice(req.params.id - 1, 1);
             fs.writeFileSync("./data/products.json", JSON.stringify({ data: productsArray }, null, 2));

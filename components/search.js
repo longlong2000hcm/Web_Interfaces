@@ -11,8 +11,10 @@ const getJSON = (filePath) => {
 const productsArray = getJSON("./data/products.json");
 
 router.get('/:property/:value', (req, res) => {
-    console.log(productsArray);
     const property = req.params.property;
+    console.log("Search route invoked")
+    console.log(`Searching for product with ${property} = ${req.params.value}`)
+    console.log("products array: ", productsArray);
     const results = productsArray.filter(product =>
         product[property] === req.params.value
     )
