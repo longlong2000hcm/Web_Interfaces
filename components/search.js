@@ -8,9 +8,8 @@ const getJSON = (filePath) => {
     return data.data;
 }
 
-var productsArray = getJSON("./data/products.json");
-
 router.get('/:property/:value', (req, res) => {
+    var productsArray = getJSON("./data/products.json");
     const property = req.params.property;
     console.log("Search route invoked")
     console.log(`Searching for product with ${property} = ${req.params.value}`)
