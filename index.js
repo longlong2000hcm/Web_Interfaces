@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = 4000;
+const port = 8000;
 
 const productComponent = require('./components/product.js');
 const searchComponent = require('./components/search.js');
