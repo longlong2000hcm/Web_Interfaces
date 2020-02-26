@@ -20,6 +20,6 @@ app.use('/login', loginComponent);
 
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`API listening on http://localhost:${port}\n`);
 })
