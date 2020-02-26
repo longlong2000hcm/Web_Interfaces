@@ -46,12 +46,13 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:4000/register",
-					"protocol": "http",
+					"raw": "https://nameless-eyrie-07474.herokuapp.com/register",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nameless-eyrie-07474",
+						"herokuapp",
+						"com"
 					],
-					"port": "4000",
 					"path": [
 						"register"
 					]
@@ -104,12 +105,13 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:4000/login",
-					"protocol": "http",
+					"raw": "https://nameless-eyrie-07474.herokuapp.com/login",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nameless-eyrie-07474",
+						"herokuapp",
+						"com"
 					],
-					"port": "4000",
 					"path": [
 						"login"
 					]
@@ -139,7 +141,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjY2MDE0MCwiZXhwIjoxNTgyNzg5NzQwfQ.SlvAbVJbSZ1TtrufXGaa-dZmdUDAdK094zY_zmdAFdc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjczODcwMSwiZXhwIjoxNTgyODY4MzAxfQ.dmFvsrBvaAFQsLRV_2fKysJUBi9o3Q1MSmUS02QtfcE",
 							"type": "string"
 						}
 					]
@@ -203,12 +205,13 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:4000/products",
-					"protocol": "http",
+					"raw": "https://nameless-eyrie-07474.herokuapp.com/products",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nameless-eyrie-07474",
+						"herokuapp",
+						"com"
 					],
-					"port": "4000",
 					"path": [
 						"products"
 					]
@@ -236,12 +239,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:4000/products",
-					"protocol": "http",
+					"raw": "https://nameless-eyrie-07474.herokuapp.com/products",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nameless-eyrie-07474",
+						"herokuapp",
+						"com"
 					],
-					"port": "4000",
 					"path": [
 						"products"
 					]
@@ -271,7 +275,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjY2MDE0MCwiZXhwIjoxNTgyNzg5NzQwfQ.SlvAbVJbSZ1TtrufXGaa-dZmdUDAdK094zY_zmdAFdc",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjczNzE5NSwiZXhwIjoxNTgyODY2Nzk1fQ.ngL6ziNzlZS0ZtFSAnGPGcbduBaq9_zv9-tN2WezKe8",
 							"type": "string"
 						}
 					]
@@ -306,12 +310,13 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:4000/products/1",
-					"protocol": "http",
+					"raw": "https://nameless-eyrie-07474.herokuapp.com/products/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nameless-eyrie-07474",
+						"herokuapp",
+						"com"
 					],
-					"port": "4000",
 					"path": [
 						"products",
 						"1"
@@ -340,12 +345,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:4000/search/category/machine",
-					"protocol": "http",
+					"raw": "https://nameless-eyrie-07474.herokuapp.com/search/category/machine",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nameless-eyrie-07474",
+						"herokuapp",
+						"com"
 					],
-					"port": "4000",
 					"path": [
 						"search",
 						"category",
@@ -385,12 +391,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:4000/products/1",
-					"protocol": "http",
+					"raw": "https://nameless-eyrie-07474.herokuapp.com/products/1",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"nameless-eyrie-07474",
+						"herokuapp",
+						"com"
 					],
-					"port": "4000",
 					"path": [
 						"products",
 						"1"
