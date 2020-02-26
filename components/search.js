@@ -8,7 +8,7 @@ const getJSON = (filePath) => {
     return data.data;
 }
 
-const productsArray = getJSON("./data/products.json");
+var productsArray = getJSON("./data/products.json");
 
 router.get('/:property/:value', (req, res) => {
     const property = req.params.property;
