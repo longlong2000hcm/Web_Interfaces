@@ -3,122 +3,12 @@
     {
       "idUser": 1,
       "username": "user1",
-      "password": "$2a$04$U5n5ya8PGe8Hwt1JbOFuXOvDGUluptjMWqKBJVyCF78UJeNz5f3i."
+      "password": "$2a$04$a4Y3aRrAXGzyGEVNgODaXucWI/lsq2fTbt61TV6sctPnrlLdxhtjy"
     },
     {
       "idUser": 2,
       "username": "user1",
-      "password": "$2a$04$NFhoLiSbtWa/hJ51lr2qieg585T0yytxuG8MzAa83B7ThVcwbwFlK"
-    },
-    {
-      "idUser": 3,
-      "username": "user1",
-      "password": "$2a$04$BWcptHoJQYrW/xgOPX9WO.UXlqs/hWExjytXbVGXKe7DLiwdvKGCe"
-    },
-    {
-      "idUser": 4,
-      "username": "user1",
-      "password": "$2a$04$ub.IYZy9YyH3n2jpWZCDIefHE3gEdjXz0HySSFJn5QG1ktpcW7l5O"
-    },
-    {
-      "idUser": 5,
-      "username": "user1",
-      "password": "$2a$04$O9Yvyqr7xCNmbSKRrJjWt.pcFsApLy0QbCaCewwuwto2zsUV7juiy"
-    },
-    {
-      "idUser": 6,
-      "username": "user1",
-      "password": "$2a$04$RZGHZ1K9ZT09e3ca8EUod.7I1jfnSLX32.ioA/pwmYqZ2ZxH1fJte"
-    },
-    {
-      "idUser": 7,
-      "username": "user1",
-      "password": "$2a$04$uY0/YgPZFketB9PUo8OyuOTl.T4gLb.XNp9xMpx53kcLdYjbCg3E."
-    },
-    {
-      "idUser": 8,
-      "username": "user1",
-      "password": "$2a$04$WQzVZdC3asROrGEpBx0Gp.uH.ur6JocAnm1kKzqkXd64nGLBs.d3W"
-    },
-    {
-      "idUser": 9,
-      "username": "user1",
-      "password": "$2a$04$fEzE6YoRZrCwKAPXiiWwnOLYDTYDO.9HiVdtVhYtaq2Y0LkrtOhia"
-    },
-    {
-      "idUser": 10,
-      "username": "user1",
-      "password": "$2a$04$hr3Zdv6dMU0wbNktYM8J/uoqUNooqKktbqEwg36mcYndZS8a1/ULa"
-    },
-    {
-      "idUser": 11,
-      "username": "user1",
-      "password": "$2a$04$1Cqfh60LkFhQbgLKEgKQzOh1G7beWBbjwqS01GqOx9NRPBANMrgQa"
-    },
-    {
-      "idUser": 12,
-      "username": "user1",
-      "password": "$2a$04$NGJZmux0eeRHmGNG70V4iel..quWzJJ4Hqb897tnhi2ApcFvlR2Lu"
-    },
-    {
-      "idUser": 13,
-      "username": "user1",
-      "password": "$2a$04$Lls2TLf71NgG2PhdYAwx8OIqLaGooNH2d9toTF7IlSrH4XISOODXK"
-    },
-    {
-      "idUser": 14,
-      "username": "user1",
-      "password": "$2a$04$qum5Lpqy8RpDHKcbbMx6/.Mjo8HSVOnYyWT4fBXXDFXmIumI8Uzh."
-    },
-    {
-      "idUser": 15,
-      "username": "user1",
-      "password": "$2a$04$8XgZZrmD2GxJ7ZhsTYMrLO3rW2xWq65eUlfN8LsRoqRhEcz.NTMSa"
-    },
-    {
-      "idUser": 16,
-      "username": "user1",
-      "password": "$2a$04$suYADAT3Sp5.QKzwkf2lXOXpeJdDI30p5c9dksUD/jMK4F7scT/zq"
-    },
-    {
-      "idUser": 17,
-      "username": "user1",
-      "password": "$2a$04$a9EHhJukIyoMVc2pLM4TL.0TOW.AMOEAVCSLzX97Y92nb5Wa8OkJy"
-    },
-    {
-      "idUser": 18,
-      "username": "user1",
-      "password": "$2a$04$60fJQkdi6bE4zYFOSqgZRuZ2WSDVf6g/cwEs4S3HAC8F1q4DSmat."
-    },
-    {
-      "idUser": 19,
-      "username": "user1",
-      "password": "$2a$04$sNB8mWtUptmwUCTNwB0bYeULT8GBSNnyl4HMo76pV9Zf4FsAuyzhq"
-    },
-    {
-      "idUser": 20,
-      "username": "user1",
-      "password": "$2a$04$naROr3CB0vm.GHSri9l5FOqcpnOjIoZ2QRF5gMBoAakXBs82SOvjq"
-    },
-    {
-      "idUser": 21,
-      "username": "user1",
-      "password": "$2a$04$be8zXSPgkONcj4xo6Y3pleiONmi0leoP8pQyWTBUNUrcoVlxoPFNW"
-    },
-    {
-      "idUser": 22,
-      "username": "user1",
-      "password": "$2a$04$2UfSumnhhMN7UrYEF4SVierNBsJqlZ10MXKLsc49YLpoPmq4575gS"
-    },
-    {
-      "idUser": 23,
-      "username": "user1",
-      "password": "$2a$04$T4IMEF3w2MWiDdSnwFyECukhVNzCYUnbxb0zkGEhZp4639gL9nGji"
-    },
-    {
-      "idUser": 24,
-      "username": "user1",
-      "password": "$2a$04$Br5/5vgCGzBV0e4DHJJsperyHG9FPfWxYFUulpe./ZrmavDaPyOmC"
+      "password": "$2a$04$rnyM4SkejD1KJ256ClAVVujZNaM0yAvpNbSN/roCXjP4ksVVxWPdW"
     }
   ]
 }

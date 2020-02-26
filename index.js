@@ -13,8 +13,6 @@ const loginComponent = require('./components/login');
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/hello', (req, res) => res.send('Hello GET World!'));
-
 app.use('/products', productComponent);
 app.use('/search', searchComponent);
 app.use('/register', registerComponent);

@@ -1,18 +1,3 @@
 {
-  "data": [
-    {
-      "id": 1,
-      "title": "very red bike",
-      "description": "for cycling",
-      "category": "machine",
-      "location": "Oulu",
-      "images": [
-        "bike.jpeg"
-      ],
-      "price": "100$",
-      "dateOfPosting": "23/2/2020",
-      "deliveryType": "shipping",
-      "sellerInfo": "sellerInfo1"
-    }
-  ]
+  "data": []
 }

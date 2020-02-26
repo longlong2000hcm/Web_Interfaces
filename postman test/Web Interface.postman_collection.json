@@ -139,7 +139,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjQ3ODQzMCwiZXhwIjoxNTgyNjA4MDMwfQ.9WYHzTEJQ6m3BatSgPcswQz5W2ub9gbLAywwGv3bs1c",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjY2MDE0MCwiZXhwIjoxNTgyNzg5NzQwfQ.SlvAbVJbSZ1TtrufXGaa-dZmdUDAdK094zY_zmdAFdc",
 							"type": "string"
 						}
 					]
@@ -178,7 +178,7 @@
 						{
 							"key": "images",
 							"type": "file",
-							"src": "./download (1).jpg"
+							"src": "download (1).jpg"
 						},
 						{
 							"key": "price",
@@ -217,6 +217,39 @@
 			"response": []
 		},
 		{
+			"name": "GET all products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7e39d72-0544-4075-aa30-997041aa165d",
+						"exec": [
+							"pm.test(\"Got response from get all products\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "modify a product with id",
 			"event": [
 				{
@@ -238,7 +271,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjQ3ODQzMCwiZXhwIjoxNTgyNjA4MDMwfQ.9WYHzTEJQ6m3BatSgPcswQz5W2ub9gbLAywwGv3bs1c",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjY2MDE0MCwiZXhwIjoxNTgyNzg5NzQwfQ.SlvAbVJbSZ1TtrufXGaa-dZmdUDAdK094zY_zmdAFdc",
 							"type": "string"
 						}
 					]
@@ -268,7 +301,7 @@
 						{
 							"key": "images",
 							"type": "file",
-							"src": "./bike.jpeg"
+							"src": "bike.jpeg"
 						}
 					]
 				},
@@ -344,7 +377,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjQ3ODQzMCwiZXhwIjoxNTgyNjA4MDMwfQ.9WYHzTEJQ6m3BatSgPcswQz5W2ub9gbLAywwGv3bs1c",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTU4MjY2MDE0MCwiZXhwIjoxNTgyNzg5NzQwfQ.SlvAbVJbSZ1TtrufXGaa-dZmdUDAdK094zY_zmdAFdc",
 							"type": "string"
 						}
 					]

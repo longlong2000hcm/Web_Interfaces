@@ -82,7 +82,7 @@ function validateNewProduct(req, res, next) {
 var productsArray = getJSON("./data/products.json");
 
 router.get('/', (req, res) => {
-    res.json(productsArray);
+    res.status(200).json(productsArray);
 });
 
 var cpUpload = upload.fields([{ name: 'images', maxCount: 4 }])
