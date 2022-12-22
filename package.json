@@ -25,7 +25,7 @@
     "express-jwt": "^5.3.1",
     "fs": "0.0.1-security",
     "has-value": "^2.0.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "multer": "^1.4.2",
     "nodemon": "^2.0.2"
   }
